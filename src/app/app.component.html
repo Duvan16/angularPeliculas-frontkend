@@ -1,4 +1,8 @@
 <app-menu></app-menu>
+
+<input type="text" (input)="(title)" />
+<app-ciclo-de-vida [titulo]="title"></app-ciclo-de-vida>
+
 <app-rating (rated)="manejarRated($event)"></app-rating>
 <div class="contenedor">
     <h2>En cines</h2>
