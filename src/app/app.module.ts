@@ -22,9 +22,13 @@ import { EditarActorComponent } from './actores/editar-actor/editar-actor.compon
 import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
 import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
 import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
 import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
 import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-peliculas.component';
+import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
+import { InputImgComponent } from './utilidades/input-img/input-img.component';
+import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,14 +50,19 @@ import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-pe
     EditarCineComponent,
     EditarPeliculaComponent,
     FormularioGeneroComponent,
-    FiltroPeliculasComponent
+    FiltroPeliculasComponent,
+    FormularioActoresComponent,
+    InputImgComponent,
+    InputMarkdownComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
