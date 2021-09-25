@@ -7,7 +7,6 @@ import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RatingComponent } from './utilidades/rating/rating.component';
 import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,22 +23,18 @@ import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
 import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import "leaflet/dist/images/marker-shadow.png";
 import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
 import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-peliculas.component';
 import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
-import { MapaComponent } from './utilidades/mapa/mapa.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListadoPeliculasComponent,
     ListadoGenericoComponent,
     MenuComponent,
-    RatingComponent,
     CicloDeVidaComponent,
     LandingPageComponent,
     IndiceGenerosComponent,
@@ -59,7 +54,6 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     InputImgComponent,
     InputMarkdownComponent,
     FormularioCineComponent,
-    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,11 +61,10 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    LeafletModule,
     ReactiveFormsModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
