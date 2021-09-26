@@ -31,6 +31,7 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
+import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { SelectorMultipleComponent } from './utilidades/selector-multiple/select
     FormularioCineComponent,
     FormularioPeliculaComponent,
     SelectorMultipleComponent,
+    AutocompleteActoresComponent,
   ],
   imports: [
     BrowserModule,

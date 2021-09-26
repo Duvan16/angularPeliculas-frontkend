@@ -10,6 +10,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   declarations: [],
   exports: [
@@ -22,10 +23,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSelectModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatAutocompleteModule,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class MaterialModule { }
+export class MaterialModule {}
