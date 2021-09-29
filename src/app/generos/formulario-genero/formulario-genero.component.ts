@@ -6,26 +6,31 @@ import { generoCreacionDTO } from '../genero';
 @Component({
   selector: 'app-formulario-genero',
   templateUrl: './formulario-genero.component.html',
-  styleUrls: ['./formulario-genero.component.css']
+  styleUrls: ['./formulario-genero.component.css'],
 })
 export class FormularioGeneroComponent implements OnInit {
-
-
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   form!: FormGroup;
 
   @Input()
-  modelo: generoCreacionDTO = { nombre: 'Drama' };
+  modelo: generoCreacionDTO = { nombre: '' };
 
   @Output()
-  submit: EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
+  onSubmit: EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      nombre: ['', {
-        validators: [Validators.required, Validators.minLength(3), primeraLetraMayuscula()]
-      }]
+      nombre: [
+        '',
+        {
+          validators: [
+            Validators.required,
+            Validators.minLength(3),
+            primeraLetraMayuscula(),
+          ],
+        },
+      ],
     });
 
     if (this.modelo !== undefined) {
@@ -34,7 +39,7 @@ export class FormularioGeneroComponent implements OnInit {
   }
 
   guardarCambios() {
-    this.submit.emit(this.form.value);
+    this.onSubmit.emit(this.form.value);
   }
 
   obtenerErrorCampoNombre() {
@@ -44,7 +49,7 @@ export class FormularioGeneroComponent implements OnInit {
     }
 
     if (campo?.hasError('minlength')) {
-      return 'La longitud mínima es de 3 caracteres'
+      return 'La longitud mínima es de 3 caracteres';
     }
 
     if (campo?.hasError('primeraLetraMayuscula')) {
@@ -53,5 +58,4 @@ export class FormularioGeneroComponent implements OnInit {
 
     return '';
   }
-
 }
