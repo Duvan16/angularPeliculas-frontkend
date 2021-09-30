@@ -32,6 +32,7 @@ import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
+import { MostrarErroresComponent } from './utilidades/mostrar-errores/mostrar-errores.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import { AutocompleteActoresComponent } from './actores/autocomplete-actores/aut
     FormularioPeliculaComponent,
     SelectorMultipleComponent,
     AutocompleteActoresComponent,
+    MostrarErroresComponent,
   ],
   imports: [
     BrowserModule,
