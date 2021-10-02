@@ -28,8 +28,12 @@ export class IndiceActoresComponent implements OnInit {
       .subscribe(
         (respuesta: HttpResponse<actorDTO[]>) => {
           if (respuesta.body) this.actores = respuesta.body;
-          let cantidadReg = respuesta.headers.get('cantidadTotalRegistros');
-          if (cantidadReg) this.cantidadTotalRegistros = parseInt(cantidadReg);
+
+          let cantidadRegistros = respuesta.headers.get(
+            'cantidadTotalRegistros'
+          );
+          if (cantidadRegistros)
+            this.cantidadTotalRegistros = parseInt(cantidadRegistros);
         },
         (error) => console.error(error)
       );
