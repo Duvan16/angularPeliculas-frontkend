@@ -5,16 +5,18 @@ import { actorCreacionDTO, actorDTO } from '../actor';
 @Component({
   selector: 'app-formulario-actores',
   templateUrl: './formulario-actores.component.html',
-  styleUrls: ['./formulario-actores.component.css']
+  styleUrls: ['./formulario-actores.component.css'],
 })
 export class FormularioActoresComponent implements OnInit {
-
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   form!: FormGroup;
 
   @Input()
   modelo!: actorDTO;
+
+  @Input()
+  errores: string[] = [];
 
   @Output()
   OnSubmit: EventEmitter<actorCreacionDTO> = new EventEmitter<actorCreacionDTO>();
@@ -29,11 +31,11 @@ export class FormularioActoresComponent implements OnInit {
       ],
       fechaNacimiento: '',
       foto: '',
-      biografia: ''
+      biografia: '',
     });
 
     if (this.modelo !== undefined) {
-      this.form.patchValue(this.modelo)
+      this.form.patchValue(this.modelo);
     }
   }
 
@@ -48,5 +50,4 @@ export class FormularioActoresComponent implements OnInit {
   onSubmit() {
     this.OnSubmit.emit(this.form.value);
   }
-
 }
