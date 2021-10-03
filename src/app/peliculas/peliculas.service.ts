@@ -8,6 +8,7 @@ import {
   PeliculaCreacionDTO,
   PeliculaDTO,
   PeliculaPostGet,
+  PeliculaPutGet,
 } from './pelicula';
 
 @Injectable({
@@ -27,6 +28,14 @@ export class PeliculasService {
 
   public postGet(): Observable<PeliculaPostGet> {
     return this.http.get<PeliculaPostGet>(`${this.apiURL}/postget`);
+  }
+
+  public putGet(id: number): Observable<PeliculaPutGet> {
+    return this.http.get<PeliculaPutGet>(`${this.apiURL}/putget/${id}`);
+  }
+  public editar(id: number, pelicula: PeliculaCreacionDTO) {
+    const formData = this.ConstruirFormData(pelicula);
+    return this.http.put(`${this.apiURL}/${id}`, formData);
   }
 
   public crear(pelicula: PeliculaCreacionDTO): Observable<number> {
