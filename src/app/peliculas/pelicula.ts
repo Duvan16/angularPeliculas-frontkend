@@ -23,6 +23,7 @@ export interface PeliculaDTO {
   trailer: string;
   poster: string;
   generos: generoDTO[];
+  actores: actorPeliculaDTO[];
   cines: cineDTO[];
 }
 
