@@ -10,3 +10,16 @@ form mat-form-field {
 .contenedor-limpiar {
     margin-bottom: 1rem;
 }
+
+form {
+    width: 100%;
+}
+
+form mat-form-field {
+    width: 30%;
+    margin-right: 1rem;
+}
+
+.contenedor-limpiar {
+    margin-bottom: 1rem;
+}
