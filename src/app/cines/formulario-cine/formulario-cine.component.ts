@@ -16,6 +16,9 @@ export class FormularioCineComponent implements OnInit {
   @Input()
   modelo!: cineCreacionDTO;
 
+  @Input()
+  errores: string[] = [];
+
   @Output()
   guardarCambios: EventEmitter<cineCreacionDTO> = new EventEmitter<cineCreacionDTO>();
 
@@ -28,13 +31,13 @@ export class FormularioCineComponent implements OnInit {
         },
       ],
       latitud: [
-        '',
+        18.4835660544367319,
         {
           validators: [Validators.required],
         },
       ],
       longitud: [
-        '',
+        -69.939351081848159,
         {
           validators: [Validators.required],
         },
