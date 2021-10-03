@@ -52,6 +52,10 @@ export class PeliculasService {
     return this.http.post<number>(this.apiURL, formData);
   }
 
+  public borrar(id: number) {
+    return this.http.delete(`${this.apiURL}/${id}`);
+  }
+
   private ConstruirFormData(pelicula: PeliculaCreacionDTO): FormData {
     const formData = new FormData();
 

@@ -22,4 +22,8 @@ export class LandingPageComponent implements OnInit {
       this.peliculasProximosEstrenos = landingPage.proximosEstrenos;
     });
   }
+
+  borrado() {
+    this.cargarDatos();
+  }
 }
