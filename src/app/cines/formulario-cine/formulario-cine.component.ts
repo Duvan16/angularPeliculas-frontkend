@@ -43,6 +43,9 @@ export class FormularioCineComponent implements OnInit {
         },
       ],
     });
+    if (this.modelo !== undefined) {
+      this.form.patchValue(this.modelo);
+    }
   }
 
   OnSubmit() {

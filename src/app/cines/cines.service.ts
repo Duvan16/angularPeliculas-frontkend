@@ -33,6 +33,14 @@ export class CinesService {
     });
   }
 
+  public obtenerPorId(id: number): Observable<cineDTO> {
+    return this.http.get<cineDTO>(`${this.apiURL}/${id}`);
+  }
+
+  public editar(id: number, cine: cineCreacionDTO) {
+    return this.http.put(`${this.apiURL}/${id}`, cine);
+  }
+
   public borrar(id: number) {
     return this.http.delete(`${this.apiURL}/${id}`);
   }
