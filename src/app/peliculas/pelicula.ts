@@ -31,3 +31,8 @@ export interface PeliculaPostGet {
   generos: generoDTO[];
   cines: cineDTO[];
 }
+
+export interface LandingPageDTO {
+  enCines: PeliculaDTO[];
+  proximosEstrenos: PeliculaDTO[];
+}
