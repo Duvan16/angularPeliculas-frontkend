@@ -9,15 +9,7 @@ import { PeliculaCreacionDTO, PeliculaDTO } from '../pelicula';
 export class EditarPeliculaComponent implements OnInit {
   constructor() {}
 
-  modelo: PeliculaDTO = {
-    titulo: 'Spider-Man',
-    trailer: 'abc',
-    enCines: true,
-    resumen: 'cosa',
-    fechaLanzamiento: new Date(),
-    poster:
-      'https://lh3.googleusercontent.com/L9y16_4RatUhIlt-USplip8bCDJSckyJdTFxa-GK8GLeoLfY85K7Pgv7xiCGvT3fkOvWBBf8kH91',
-  };
+  modelo!: PeliculaDTO;
 
   ngOnInit(): void {}
 

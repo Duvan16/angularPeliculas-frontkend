@@ -14,25 +14,24 @@ export class FormularioPeliculaComponent implements OnInit {
   form!: FormGroup;
 
   @Input()
+  errores: string[] = [];
+
+  @Input()
   modelo!: PeliculaDTO;
 
   @Output()
   OnSubmit: EventEmitter<PeliculaCreacionDTO> = new EventEmitter<PeliculaCreacionDTO>();
 
-  generosNoSeleccionados: MultipleSelectorModel[] = [
-    { llave: 1, valor: 'Drama' },
-    { llave: 2, valor: 'Acción' },
-    { llave: 3, valor: 'Comedia' },
-  ];
+  @Input()
+  generosNoSeleccionados: MultipleSelectorModel[] = [];
 
+  @Input()
   generosSeleccionados: MultipleSelectorModel[] = [];
 
-  cinesNoSeleccionados: MultipleSelectorModel[] = [
-    { llave: 1, valor: 'Sambil' },
-    { llave: 2, valor: 'Agora' },
-    { llave: 3, valor: 'Acrópolis' },
-  ];
+  @Input()
+  cinesNoSeleccionados: MultipleSelectorModel[] = [];
 
+  @Input()
   cinesSeleccionados: MultipleSelectorModel[] = [];
 
   ngOnInit(): void {
