@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -33,6 +33,15 @@ export class PeliculasService {
   public putGet(id: number): Observable<PeliculaPutGet> {
     return this.http.get<PeliculaPutGet>(`${this.apiURL}/putget/${id}`);
   }
+
+  public filtrar(valores: any): Observable<any> {
+    const params = new HttpParams({ fromObject: valores });
+    return this.http.get<PeliculaDTO[]>(`${this.apiURL}/filtrar`, {
+      params,
+      observe: 'response',
+    });
+  }
+
   public editar(id: number, pelicula: PeliculaCreacionDTO) {
     const formData = this.ConstruirFormData(pelicula);
     return this.http.put(`${this.apiURL}/${id}`, formData);

@@ -6,12 +6,10 @@
                     <img [src]="pelicula.poster" alt="Poster" />
                 </a>
                 <p>
-                    <a [routerLink]="'/pelicula/' + pelicula.id">{{pelicula.titulo}}</a>
+                    <a>{{ pelicula.titulo }}</a>
                 </p>
                 <div>
-                    <a mat-flat-button color="primary" [routerLink]="'/peliculas/editar/' + pelicula.id">
-                        Editar
-                      </a>
+                    <a mat-flat-button color="primary"> Editar </a>
                     <button mat-flat-button color="warn" type="button">Borrar</button>
                 </div>
             </div>

@@ -36,6 +36,10 @@ export class GenerosService {
     return this.http.get<generoDTO>(`${this.apiURL}/${id}`);
   }
 
+  public obtenerTodos() {
+    return this.http.get<generoDTO[]>(`${this.apiURL}/todos`);
+  }
+
   public editar(id: number, genero: generoCreacionDTO) {
     return this.http.put(`${this.apiURL}/${id}`, genero);
   }
