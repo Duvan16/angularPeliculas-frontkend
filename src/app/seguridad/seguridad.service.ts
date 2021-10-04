@@ -75,4 +75,7 @@ export class SeguridadService {
       credenciales
     );
   }
+  obtenerToken() {
+    return localStorage.getItem(this.llaveToken);
+  }
 }
