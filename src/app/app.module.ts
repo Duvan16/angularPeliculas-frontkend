@@ -39,6 +39,7 @@ import { AutorizadoComponent } from './seguridad/autorizado/autorizado.component
 import { LoginComponent } from './seguridad/login/login.component';
 import { RegistroComponent } from './seguridad/registro/registro.component';
 import { FormularioAutenticacionComponent } from './seguridad/formulario-autenticacion/formulario-autenticacion.component';
+import { RatingComponent } from './utilidades/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { FormularioAutenticacionComponent } from './seguridad/formulario-autenti
     LoginComponent,
     RegistroComponent,
     FormularioAutenticacionComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
