@@ -13,6 +13,7 @@ export class SeguridadService {
   apiURL = environment.apiURL + 'cuentas';
   private readonly llaveToken = 'token';
   private readonly llaveExpiracion = 'token-expiracion';
+  private readonly campoRol = 'role';
 
   ngOnInit(): void {}
 
@@ -40,7 +41,7 @@ export class SeguridadService {
   }
 
   obtenerRol(): string {
-    return '';
+    return this.obtenerCampoJWT(this.campoRol);
   }
 
   obtenerCampoJWT(campo: string): string {
