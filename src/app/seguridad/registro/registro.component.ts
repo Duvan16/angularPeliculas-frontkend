@@ -23,8 +23,8 @@ export class RegistroComponent implements OnInit {
     this.seguridadService.registrar(credenciales).subscribe(
       (respuesta) => {
         console.log(respuesta);
-        // this.seguridadService.guardarToken(respuesta);
-        // this.router.navigate(['/']);
+        this.seguridadService.guardarToken(respuesta);
+        this.router.navigate(['/']);
       },
       (errores) => (this.errores = parsearErroresAPI(errores))
     );
